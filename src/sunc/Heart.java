@@ -29,7 +29,7 @@ public class Heart extends JWindow {
         int iconHeight = ig.getIconHeight();
         label.setBounds(new Rectangle(Constant.center_x - iconWidth / 2, Constant.center_y - iconHeight / 2, iconWidth, iconHeight));
 
-        label.setLocation(Constant.center_x - ig.getIconWidth() / 2, Constant.center_y - ig.getIconHeight() / 2);
+        label.setLocation(Constant.center_x, Constant.center_y);
 
         add(label);
     }
@@ -102,7 +102,9 @@ public class Heart extends JWindow {
         dc.t.start();
         while (dc.isValid()) {
             dc.reset();
-            Thread.sleep(500);
+            TimeUnit.MILLISECONDS.sleep(200);
+            dc.getContentPane().update(dc.getContentPane().getGraphics());
+//            dc.getContentPane().update(dc.getGraphics());
         }
     }
 

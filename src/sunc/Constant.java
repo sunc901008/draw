@@ -18,6 +18,6 @@ class Constant {
 
     static final Long millSeconds = 1000L;
 
-    static final String imagePath = System.getProperty("user.dir") + "/source/a.jpg";
-    static final String imagePath_gif = System.getProperty("user.dir") + "/source/b.gif";
+    static final String imagePath = System.getProperty("user.dir") + "/source/a3.png";
+    static final String imagePath_gif = System.getProperty("user.dir") + "/source/c.gif";
 }
