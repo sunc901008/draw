@@ -5,7 +5,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.concurrent.TimeUnit;
 
 /**
  * creator: sunc date: 2018/12/12 description:
@@ -24,9 +23,11 @@ public class MyPanel extends JPanel {
             y = (Constant.WINDOW_HEIGHT >> 1) - r * (20 * Math.cos(theta) - 6 * Math.cos(2 * theta) - 3 * Math.cos(3 * theta) - Math.cos(4 * theta));
             BufferedImage image;
             try {
-                image = ImageIO.read(new File(Constant.imagePath));
+                File file = new File(Constant.imagePath);
+                image = ImageIO.read(file);
             } catch (Exception e) {
                 e.printStackTrace();
+                System.exit(0);
                 return;
             }
             g.drawImage(image, (int) x, (int) y, null);

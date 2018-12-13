@@ -1,6 +1,8 @@
 package sunc;
 
+
 import java.awt.*;
+import java.io.File;
 
 /**
  * creator: sunc date: 2018/12/11 description:
@@ -18,6 +20,7 @@ class Constant {
 
     static final Long millSeconds = 1000L;
 
-    static final String imagePath = System.getProperty("user.dir") + "/source/a3.png";
-    static final String imagePath_gif = System.getProperty("user.dir") + "/source/c.gif";
+    static String imagePath = System.getProperty("user.dir") + File.separator + "source" + File.separator + "a3.png";
+    static String imagePath_gif = System.getProperty("user.dir") + File.separator + "source" + File.separator + "c.gif";
+
 }
